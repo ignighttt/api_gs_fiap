@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Encontre seu próximo veículo com a AutoVendas.">
+  <title>AutoVendas | Encontre seu próximo carro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="logo" href="/" aria-label="AutoVendas - início"><span class="logo-icon">◆</span> Auto<span>Vendas</span></a>
+      <nav aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#veiculos">Carros</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+      <button class="saved-btn" type="button" id="favorites-toggle" aria-pressed="false">♡ <span>Favoritos</span> <span id="favorite-count" class="fav-count">0</span></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> Seu próximo carro está aqui</div>
+          <h1>Encontre o carro <em>ideal</em> para você.</h1>
+          <p>Explore veículos selecionados, compare opções e encontre o melhor caminho para sua próxima conquista.</p>
+          <form id="search-form" class="hero-search" role="search">
+            <label for="search-input" class="sr-only">Marca, modelo ou versão</label>
+            <span aria-hidden="true">⌕</span><input id="search-input" placeholder="Busque por marca ou modelo..." autocomplete="off">
+            <button type="submit">Buscar <span aria-hidden="true">→</span></button>
+          </form>
+          <div class="hero-stats"><div><strong>6</strong><span>veículos no catálogo</span></div><div><strong>5</strong><span>categorias</span></div><div><strong>24/7</strong><span>busca online</span></div></div>
+        </div>
+        <div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><img src="{{ url_for('static',filename='img/hero-car.svg') }}" alt="Ilustração de SUV premium azul escuro"><div class="floating-label"><span>✦</span><div><strong>Encontre sua direção</strong><small>Escolha com confiança</small></div></div></div>
+      </div>
+    </section>
+    <section class="catalog container" id="veiculos">
+      <div class="section-head"><div><div class="kicker">NOSSO CATÁLOGO</div><h2>Encontre sua próxima paixão</h2><p>Escolha o estilo de carro que combina com você.</p></div><span id="results-count" class="results-count"></span></div>
+      <div class="filters" role="group" aria-label="Filtrar por categoria">
+        <button class="filter active" data-category="Todos" type="button">✦ Todos</button>
+        <button class="filter" data-category="Hatch" type="button">▰ Hatch</button>
+        <button class="filter" data-category="Sedan" type="button">▱ Sedan</button>
+        <button class="filter" data-category="SUV" type="button">◈ SUV</button>
+        <button class="filter" data-category="Picape" type="button">▱ Picape</button>
+        <button class="filter" data-category="Utilitário" type="button">⬡ Utilitário</button>
+      </div>
+      <div class="cars-grid" id="cars-grid" aria-live="polite"><p class="loading">Carregando veículos...</p></div>
+      <p class="status-message" id="status-message" role="status"></p>
+    </section>
+    <section class="about" id="sobre"><div class="container about-content"><div><div class="kicker">POR QUE A AUTOVENDAS?</div><h2>Seu próximo capítulo começa na estrada.</h2></div><p>Uma experiência simples, moderna e transparente para descobrir veículos, salvar seus favoritos e entrar em contato com o vendedor.</p></div></section>
+    <section class="contact-strip" id="contato"><div class="container"><h2>Pronto para encontrar seu próximo carro?</h2><p>Explore nosso catálogo e envie seu interesse pelo veículo desejado.</p><a class="cta" href="#veiculos">Explorar veículos →</a></div></section>
+  </main>
+  <footer><div class="container footer-flex"><span class="logo">◆ Auto<span>Vendas</span></span><small>© <span id="year"></span> AutoVendas — Projeto demonstrativo. Valores e veículos ilustrativos.</small></div></footer>
+  <dialog id="car-modal" aria-labelledby="modal-title"><button id="close-modal" class="modal-close" aria-label="Fechar" type="button">×</button><div id="modal-body"></div></dialog>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-label="Ilustração de veículo polo">
+<defs><linearGradient id="body" x1="0" x2=".3" y1="0" y2="1"><stop stop-color="#606f83"/><stop offset="1" stop-color="#344153"/></linearGradient><linearGradient id="windows"><stop stop-color="#8fa9c5"/><stop offset="1" stop-color="#1b314a"/></linearGradient><filter id="shadow"><feGaussianBlur stdDeviation="13"/></filter></defs>
+<ellipse cx="452" cy="362" rx="330" ry="25" fill="#172b43" opacity=".2" filter="url(#shadow)"/>
+<path d="M126 265 L187 252 L272 172 Q294 149 345 149 L561 149 Q610 151 645 187 L707 247 L781 266 Q807 276 809 303 L808 339 L111 339 L111 294 Q113 274 126 265Z" fill="url(#body)" stroke="#26384b" stroke-width="7"/>
+<path d="M287 181 Q299 167 340 166 L445 166 L445 253 L207 253 Z" fill="url(#windows)" stroke="#a6bed1" stroke-width="5"/>
+<path d="M465 166 L555 166 Q596 167 623 198 L679 253 L465 253 Z" fill="url(#windows)" stroke="#a6bed1" stroke-width="5"/>
+<path d="M465 264 L465 326 M199 268 L201 326 M601 264 L601 323" stroke="#ffffff" stroke-opacity=".23" stroke-width="4"/>
+<path d="M121 290 L171 286 L179 309 L117 311Z" fill="#fff3cd"/><path d="M738 283 L802 290 L802 313 L732 307Z" fill="#e84343"/>
+<path d="M127 321 L799 321" stroke="#182339" stroke-width="8"/>
+<circle cx="268" cy="337" r="74" fill="#101924"/><circle cx="268" cy="337" r="50" fill="#a5adb8"/><circle cx="268" cy="337" r="34" fill="#3e4b5a"/><circle cx="268" cy="337" r="12" fill="#c5ced7"/>
+<circle cx="665" cy="337" r="74" fill="#101924"/><circle cx="665" cy="337" r="50" fill="#a5adb8"/><circle cx="665" cy="337" r="34" fill="#3e4b5a"/><circle cx="665" cy="337" r="12" fill="#c5ced7"/>
+<path d="M306 281 L397 281 M498 281 L560 281" stroke="#e8edf4" opacity=".7" stroke-width="8" stroke-linecap="round"/>
+</svg>
